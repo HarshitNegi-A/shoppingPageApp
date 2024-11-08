@@ -16,13 +16,14 @@ const ProductItem = (props) => {
       description:product.description,
       quantity:1
     }
-    let count=0;
-    for(let i in products){
-      if(product.id===products[i].id){
-        count++;
-      }
-    }
-        if(count===0){
+    const existingItem=products.find((item)=>item.id===product.id);
+    // let count=0;
+    // for(let i in products){
+    //   if(product.id===products[i].id){
+    //     count++;
+    //   }
+    // }
+        if(!existingItem){
       dispatch(cartActions.addProduct(obj))
     }
     else{
