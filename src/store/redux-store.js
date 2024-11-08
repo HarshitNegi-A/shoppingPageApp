@@ -58,7 +58,9 @@ const store=configureStore({
         cart:cartSlice.reducer,
         ui:uiSlice.reducer,
     }
-})
+});
+
+
 
 export const cartActions=cartSlice.actions; 
 export const uiActions=uiSlice.actions; 
